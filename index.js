@@ -15,6 +15,7 @@ await connectDB();
 const server = new ApolloServer({
 	typeDefs: mergedTypeDefs,
 	resolvers: mergedResolvers,
+	introspection: true,
 });
 
 // Passing an ApolloServer instance to the `startStandaloneServer` function:
